@@ -127,12 +127,14 @@ export const App = () => {
         <fieldset>
           <legend>UUID</legend>
           <div>
-            UUIDv4: <button onClick={() => window.navigator.clipboard.writeText(uuidV4)}>Copy</button>{' '}
-            <button onClick={() => setUuidV4(crypto.randomUUID())}>Regenerate</button> {uuidV4}
+            v4: <button onClick={() => window.navigator.clipboard.writeText(uuidV4)}>Copy</button>{' '}
+            <button onClick={() => setUuidV4(crypto.randomUUID())}>Regenerate</button>{' '}
+            <span style={{ fontFamily: 'monospace' }}>{uuidV4}</span>
           </div>
           <div>
-            UUIDv7: <button onClick={() => window.navigator.clipboard.writeText(uuidV7)}>Copy</button>{' '}
-            <button onClick={() => setUuidV7(generateUuidV7())}>Regenerate</button> {uuidV7}
+            v7: <button onClick={() => window.navigator.clipboard.writeText(uuidV7)}>Copy</button>{' '}
+            <button onClick={() => setUuidV7(generateUuidV7())}>Regenerate</button>{' '}
+            <span style={{ fontFamily: 'monospace' }}>{uuidV7}</span>
           </div>
         </fieldset>
       </div>
